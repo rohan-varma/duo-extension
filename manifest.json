@@ -10,7 +10,18 @@
         "default_popup": "popup.html",
         "default_title": "Duo Login Code Keeper"
     },
+    "background": {
+    "scripts": ["background.js"]
+    },
     "permissions": [
-        "activeTab", "storage",
-     ]
+        "activeTab",
+        "tabs",
+        "storage"
+     ],
+    "content_scripts": [
+    {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["getDescription.js"]
+    }
+   ]
 }

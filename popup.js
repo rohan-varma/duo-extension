@@ -16,6 +16,10 @@ function genCodes(newCodes) {
 	document.body.appendChild(div);
 }
 document.addEventListener('DOMContentLoaded', function() {
+	// const k = document.getElementsByClassName('passcode-input')
+	// if (k !== null) {
+	// 	alert(JSON.stringify(k, null, 2));
+	// }
 	var div = document.createElement('div');
 	div.setAttribute("id", "CodeDiv");
 	div.innerHTML = "Your codes are: ";
@@ -39,4 +43,28 @@ document.addEventListener('DOMContentLoaded', function() {
   	genCodes(newCodes);
   }
 
+//   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+//   chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"}, function(response) {
+//       console.log(response.farewell);
+//   });
+// });
+
+//   chrome.tabs.executeScript({
+//     "file": "getDescription.js",
+//     "allFrames" : true
+// });
+
 })
+
+
+
+// chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+//     var tab = tabs[0];
+//     console.log(tab.url, tab.title);
+//     chrome.tabs.getSelected(null, function(tab) {
+//         chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(msg) {
+//             msg = msg || {};
+//             console.log('onResponse', msg.farewell);
+//         });
+//     });
+// });
