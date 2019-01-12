@@ -1,14 +1,14 @@
 {
     "manifest_version": 2,
  
-    "name": "Click It", 
-    "description": "My first Chrome extension.",
+    "name": "Duo Login Code Keeper", 
+    "description": "Manage duo codes for quicker login.",
     "version": "1.0",
-    "author": "Emad Elmogy",
+    "author": "Rohan Varma",
     "browser_action": {
         "default_icon": "icon.png",
         "default_popup": "popup.html",
-        "default_title": "My custom google Extension"
+        "default_title": "Duo Login Code Keeper"
     },
     "permissions": [
         "activeTab", "storage",
