@@ -24,8 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
 	div.setAttribute("id", "CodeDiv");
 	div.innerHTML = "Your codes are: ";
 	// get codes from local storage
+	var currentCodes;
 	chrome.storage.sync.get("codes", function(result) {
 		if(result !== null && result.codes !== null) {
+			currentCodes = result.codes;
 			// alert(JSON.stringify(result["codes"], null, 2));
 			div.innerHTML += result.codes;
 			document.body.appendChild(div);
@@ -40,6 +42,9 @@ document.addEventListener('DOMContentLoaded', function() {
   var changeButton = document.getElementById('changeButton');
   changeButton.onclick = function() {
   	var newCodes = prompt('Please enter new codes');
+  	if (newCodes === null || newCodes === "" || newCodes === undefined) {
+  		newCodes = currentCodes;
+  	}
   	genCodes(newCodes);
   }
 
