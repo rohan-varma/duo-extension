@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				var currentIndex = result.index;
 				currentIndex = currentIndex || 0;
 				copyTextToClipboard(codeList[currentIndex]);
-				alert(currentIndex + " " + codeList[currentIndex]);
+				// alert(currentIndex + " " + codeList[currentIndex]);
 				var newIndex = currentIndex + 2;
 				if (newIndex >= codeList.length) {
 					newIndex = 0;
