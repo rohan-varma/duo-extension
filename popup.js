@@ -17,11 +17,6 @@ function genCodes(newCodes) {
 	document.body.appendChild(div);
 }
 document.addEventListener('DOMContentLoaded', function() {
-	// copyTextToClipboard('f da popo darnell');
-	// const k = document.getElementsByClassName('passcode-input')
-	// if (k !== null) {
-	// 	alert(JSON.stringify(k, null, 2));
-	// }
 	var div = document.createElement('div');
 	div.setAttribute("id", "CodeDiv");
 	div.innerHTML = "Your codes are: ";
